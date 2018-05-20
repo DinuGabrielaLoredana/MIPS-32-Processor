@@ -35,7 +35,8 @@ entity ctrl is
            MemWr : out  STD_LOGIC;
            Mem2Reg : out  STD_LOGIC;
            RegWr : out  STD_LOGIC;
-           RegDest : out  STD_LOGIC);
+           RegDest : out  STD_LOGIC;
+			  Branch : out STD_LOGIC);
 end ctrl;
 
 architecture Behavioral of ctrl is
@@ -43,9 +44,22 @@ architecture Behavioral of ctrl is
 begin
 
 	MemWr <= '1' when OP = "101011" else '0';
-	ALUSrc <= '0' when OP = "000000" else '1';
+	
+	
+	with OP select
+		ALUSrc <= '0' when "000000",
+					 '0' when "000100",
+					 '1'when others;
+	
+	
 	Mem2Reg <= '1' when OP = "100011" else '0';
-	RegWr <= '0' when OP = "101011" else '1';
+	
+	
+	with OP select
+	RegWr <= '0' when "101011",
+				'0' when "000100",
+				'1' when others;
+	
 	RegDest <= '1' when OP = "000000" else '0'; 
 	
 	with Funct select
@@ -53,5 +67,7 @@ begin
 					"10" when "100100",
 					"11" when "100101",
 					"00" when others;
+					
+	Branch <= '1' when OP = "000100" else '0';
 end Behavioral;
 
