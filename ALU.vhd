@@ -33,7 +33,9 @@ entity ALU is
            FAddr : in  STD_LOGIC_VECTOR (15 downto 0);
            ALUSrc : in  STD_LOGIC;
            ALUOP : in  STD_LOGIC_VECTOR (1 downto 0);
-           Y : out  STD_LOGIC_VECTOR (31 downto 0));
+           Y : out  STD_LOGIC_VECTOR (31 downto 0);
+			  Zero : out STD_LOGIC);
+			  
 end ALU;
 
 architecture Behavioral of ALU is
@@ -53,7 +55,8 @@ begin
 		 OP1 - OP2 when "01",
 		 OP1 and OP2 when "10",
 		 OP1 or OP2 when others;
-
+	Zero <= '1' when RdData1 = RdData2 else '0';
+	
 	
 end Behavioral;
 
