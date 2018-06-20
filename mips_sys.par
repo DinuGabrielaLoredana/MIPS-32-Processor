@@ -1,0 +1,181 @@
+Release 9.2.04i par J.40
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-SK86D78::  Wed Apr 25 20:59:21 2018
+
+par -w -intstyle ise -ol std -t 1 mips_sys_map.ncd mips_sys.ncd mips_sys.pcf 
+
+
+Constraints file: mips_sys.pcf.
+Loading device for application Rf_Device from file '3s400.nph' in environment E:\Program Files\Xilinx.
+   "mips_sys" is an NCD, version 3.1, device xc3s400, package ft256, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.39 2007-10-19".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                        1 out of 8      12%
+   Number of External IOBs                  21 out of 173    12%
+      Number of LOCed IOBs                  21 out of 21    100%
+
+   Number of Slices                        200 out of 3584    5%
+      Number of SLICEMs                     80 out of 1792    4%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 1 secs 
+Finished initial Timing Analysis.  REAL time: 1 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989be2) REAL time: 2 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 2 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:1c9c37d) REAL time: 2 secs 
+
+Phase 4.2
+.
+Phase 4.2 (Checksum:26259fc) REAL time: 2 secs 
+
+Phase 5.8
+.........
+..
+..........................
+..
+...
+..
+Phase 5.8 (Checksum:9c38e8) REAL time: 4 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 4 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 4 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 5 secs 
+
+REAL time consumed by placer: 5 secs 
+CPU  time consumed by placer: 3 secs 
+Writing design to file mips_sys.ncd
+
+
+Total REAL time to Placer completion: 5 secs 
+Total CPU time to Placer completion: 4 secs 
+
+Starting Router
+
+Phase 1: 1717 unrouted;       REAL time: 5 secs 
+
+Phase 2: 1467 unrouted;       REAL time: 5 secs 
+
+Phase 3: 468 unrouted;       REAL time: 5 secs 
+
+Phase 4: 468 unrouted; (0)      REAL time: 5 secs 
+
+Phase 5: 468 unrouted; (0)      REAL time: 5 secs 
+
+Phase 6: 468 unrouted; (0)      REAL time: 6 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 6 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 6 secs 
+
+
+Total REAL time to Router completion: 6 secs 
+Total CPU time to Router completion: 5 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           Clk_BUFGP |      BUFGMUX0| No   |  120 |  0.059     |  1.073      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.307
+   The MAXIMUM PIN DELAY IS:                               3.960
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   3.042
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         527         777         272          10           0           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_Clk = PERIOD TIMEGRP "Clk" 20 ns HIGH  | SETUP   |     0.877ns|    19.123ns|       0|           0
+  50%                                       | HOLD    |     1.001ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  211 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file mips_sys.ncd
+
+
+
+PAR done!

@@ -1,0 +1,9 @@
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.sch" mips_sys.vhf
+xst -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -ifn mips_sys.xst -ofn mips_sys.syr
+ngdbuild -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constrainFile1.ucf" -p xc3s400-ft256-4 "mips_sys.ngc" mips_sys.ngd
+ngdbuild -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constrainFile1.ucf" -p xc3s400-ft256-4 "mips_sys.ngc" mips_sys.ngd
+map -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -p xc3s400-ft256-4 -cm area -pr b -k 4 -c 100 -o mips_sys_map.ncd mips_sys.ngd mips_sys.pcf
+par -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -w -intstyle ise -ol std -t 1 mips_sys_map.ncd mips_sys.ncd mips_sys.pcf
+trce -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -e 3 -s 4 -xml mips_sys mips_sys.ncd -o mips_sys.twr mips_sys.pcf -ucf constrainFile1.ucf
+bitgen -ise "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise" -intstyle ise -f mips_sys.ut mips_sys.ncd
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "C:/Users/gdinu/Desktop/automatica/labCSO/lab10/MIPS_Sys/mips_sys.sch" mips_sys.vhf

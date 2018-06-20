@@ -1,0 +1,215 @@
+//! **************************************************************************
+// Written by: Map J.40 on Wed Apr 25 20:59:16 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "AN<0>" LOCATE = SITE "D14" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "G14" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "F14" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "E13" LEVEL 1;
+COMP "BTN0" LOCATE = SITE "M13" LEVEL 1;
+COMP "a" LOCATE = SITE "E14" LEVEL 1;
+COMP "b" LOCATE = SITE "G13" LEVEL 1;
+COMP "c" LOCATE = SITE "N15" LEVEL 1;
+COMP "d" LOCATE = SITE "P15" LEVEL 1;
+COMP "e" LOCATE = SITE "R16" LEVEL 1;
+COMP "f" LOCATE = SITE "F13" LEVEL 1;
+COMP "g" LOCATE = SITE "N16" LEVEL 1;
+COMP "Clk" LOCATE = SITE "T9" LEVEL 1;
+COMP "SWA<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "SWA<1>" LOCATE = SITE "G12" LEVEL 1;
+COMP "SWA<2>" LOCATE = SITE "H14" LEVEL 1;
+COMP "SWA<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "SWB<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "SWB<1>" LOCATE = SITE "J13" LEVEL 1;
+COMP "SWB<2>" LOCATE = SITE "K14" LEVEL 1;
+COMP "SWB<3>" LOCATE = SITE "K13" LEVEL 1;
+NET "Clk_BUFGP/IBUFG" BEL "Clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP Clk = BEL "u_iface/saQ_Cnt_16" BEL "u_iface/saQ_Cnt_15" BEL
+        "u_iface/saQ_Cnt_14" BEL "u_iface/saQ_Cnt_13" BEL "u_iface/saQ_Cnt_12"
+        BEL "u_iface/saQ_Cnt_11" BEL "u_iface/saQ_Cnt_10" BEL
+        "u_iface/saQ_Cnt_9" BEL "u_iface/saQ_Cnt_8" BEL "u_iface/saQ_Cnt_7"
+        BEL "u_iface/saQ_Cnt_6" BEL "u_iface/saQ_Cnt_5" BEL
+        "u_iface/saQ_Cnt_4" BEL "u_iface/saQ_Cnt_3" BEL "u_iface/saQ_Cnt_2"
+        BEL "u_iface/saQ_Cnt_1" BEL "u_iface/saQ_Cnt_0" BEL "u_iface/INW0_3"
+        BEL "u_iface/INW0_2" BEL "u_iface/INW0_1" BEL "u_iface/INW0_0" BEL
+        "u_iface/INW1_3" BEL "u_iface/INW1_2" BEL "u_iface/INW1_1" BEL
+        "u_iface/INW1_0" BEL "u_mips/U_DataMem/inst_Mram_mem31" BEL
+        "u_mips/U_DataMem/inst_Mram_mem30" BEL
+        "u_mips/U_DataMem/inst_Mram_mem29" BEL
+        "u_mips/U_DataMem/inst_Mram_mem28" BEL
+        "u_mips/U_DataMem/inst_Mram_mem27" BEL
+        "u_mips/U_DataMem/inst_Mram_mem26" BEL
+        "u_mips/U_DataMem/inst_Mram_mem25" BEL
+        "u_mips/U_DataMem/inst_Mram_mem24" BEL
+        "u_mips/U_DataMem/inst_Mram_mem23" BEL
+        "u_mips/U_DataMem/inst_Mram_mem22" BEL
+        "u_mips/U_DataMem/inst_Mram_mem21" BEL
+        "u_mips/U_DataMem/inst_Mram_mem20" BEL
+        "u_mips/U_DataMem/inst_Mram_mem19" BEL
+        "u_mips/U_DataMem/inst_Mram_mem18" BEL
+        "u_mips/U_DataMem/inst_Mram_mem17" BEL
+        "u_mips/U_DataMem/inst_Mram_mem16" BEL
+        "u_mips/U_DataMem/inst_Mram_mem15" BEL
+        "u_mips/U_DataMem/inst_Mram_mem14" BEL
+        "u_mips/U_DataMem/inst_Mram_mem13" BEL
+        "u_mips/U_DataMem/inst_Mram_mem12" BEL
+        "u_mips/U_DataMem/inst_Mram_mem11" BEL
+        "u_mips/U_DataMem/inst_Mram_mem10" BEL
+        "u_mips/U_DataMem/inst_Mram_mem9" BEL
+        "u_mips/U_DataMem/inst_Mram_mem8" BEL
+        "u_mips/U_DataMem/inst_Mram_mem7" BEL
+        "u_mips/U_DataMem/inst_Mram_mem6" BEL
+        "u_mips/U_DataMem/inst_Mram_mem5" BEL
+        "u_mips/U_DataMem/inst_Mram_mem4" BEL
+        "u_mips/U_DataMem/inst_Mram_mem3" BEL
+        "u_mips/U_DataMem/inst_Mram_mem2" BEL "u_mips/U_DataMem/inst_Mram_mem"
+        BEL "u_mips/U_DataMem/inst_Mram_mem1" BEL "u_mips/U_DataMem/OUTW0_31"
+        BEL "u_mips/U_DataMem/OUTW0_30" BEL "u_mips/U_DataMem/OUTW0_29" BEL
+        "u_mips/U_DataMem/OUTW0_28" BEL "u_mips/U_DataMem/OUTW0_27" BEL
+        "u_mips/U_DataMem/OUTW0_26" BEL "u_mips/U_DataMem/OUTW0_25" BEL
+        "u_mips/U_DataMem/OUTW0_24" BEL "u_mips/U_DataMem/OUTW0_23" BEL
+        "u_mips/U_DataMem/OUTW0_22" BEL "u_mips/U_DataMem/OUTW0_21" BEL
+        "u_mips/U_DataMem/OUTW0_20" BEL "u_mips/U_DataMem/OUTW0_19" BEL
+        "u_mips/U_DataMem/OUTW0_18" BEL "u_mips/U_DataMem/OUTW0_17" BEL
+        "u_mips/U_DataMem/OUTW0_16" BEL "u_mips/U_DataMem/OUTW0_15" BEL
+        "u_mips/U_DataMem/OUTW0_14" BEL "u_mips/U_DataMem/OUTW0_13" BEL
+        "u_mips/U_DataMem/OUTW0_12" BEL "u_mips/U_DataMem/OUTW0_11" BEL
+        "u_mips/U_DataMem/OUTW0_10" BEL "u_mips/U_DataMem/OUTW0_9" BEL
+        "u_mips/U_DataMem/OUTW0_8" BEL "u_mips/U_DataMem/OUTW0_7" BEL
+        "u_mips/U_DataMem/OUTW0_6" BEL "u_mips/U_DataMem/OUTW0_5" BEL
+        "u_mips/U_DataMem/OUTW0_4" BEL "u_mips/U_DataMem/OUTW0_3" BEL
+        "u_mips/U_DataMem/OUTW0_2" BEL "u_mips/U_DataMem/OUTW0_1" BEL
+        "u_mips/U_DataMem/OUTW0_0" BEL "u_mips/U_PC/PC_6" BEL
+        "u_mips/U_PC/PC_5" BEL "u_mips/U_PC/PC_4" BEL "u_mips/U_PC/PC_3" BEL
+        "u_mips/U_PC/PC_2" BEL "u_mips/U_PC/PC_6_1" BEL "u_mips/U_PC/PC_4_1"
+        BEL "u_mips/U_PC/PC_3_1" BEL "u_mips/U_Regs/inst_Mram_mem.SLICEM_F"
+        BEL "u_mips/U_Regs/inst_Mram_mem.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem10.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem10.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem100.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem100.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem102.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem102.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem104.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem104.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem106.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem106.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem108.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem108.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem110.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem110.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem112.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem112.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem114.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem114.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem116.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem116.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem118.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem118.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem12.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem12.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem120.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem120.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem122.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem122.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem124.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem124.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem126.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem126.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem14.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem14.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem16.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem16.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem18.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem18.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem2.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem2.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem20.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem20.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem22.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem22.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem24.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem24.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem26.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem26.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem28.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem28.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem30.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem30.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem32.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem32.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem34.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem34.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem36.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem36.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem38.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem38.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem4.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem4.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem40.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem40.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem42.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem42.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem44.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem44.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem46.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem46.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem48.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem48.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem50.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem50.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem52.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem52.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem54.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem54.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem56.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem56.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem58.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem58.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem6.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem6.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem60.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem60.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem62.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem62.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem64.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem64.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem66.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem66.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem68.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem68.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem70.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem70.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem72.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem72.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem74.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem74.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem76.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem76.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem78.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem78.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem8.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem8.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem80.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem80.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem82.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem82.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem84.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem84.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem86.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem86.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem88.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem88.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem90.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem90.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem92.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem92.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem94.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem94.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem96.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem96.SLICEM_G" BEL
+        "u_mips/U_Regs/inst_Mram_mem98.SLICEM_F" BEL
+        "u_mips/U_Regs/inst_Mram_mem98.SLICEM_G";
+TS_Clk = PERIOD TIMEGRP "Clk" 20 ns HIGH 50%;
+SCHEMATIC END;

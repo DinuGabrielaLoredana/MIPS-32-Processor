@@ -1,0 +1,752 @@
+Release 9.2.04i - xst J.40
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: mips_sys.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips_sys.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips_sys"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : mips_sys
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : No
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : mips_sys.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/mips_sys is now defined in a different file.  It was defined in "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhd", and is now defined in "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhf".
+WARNING:HDLParsers:3607 - Unit work/mips_sys/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhd", and is now defined in "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhf".
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ctrl.vhd" in Library work.
+Entity <ctrl> compiled.
+Entity <ctrl> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/DataMem.vhd" in Library work.
+Entity <DataMem> compiled.
+Entity <DataMem> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/MUX2V32.vhd" in Library work.
+Entity <MUX2V32> compiled.
+Entity <MUX2V32> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/MUX2V5.vhd" in Library work.
+Entity <MUX2V5> compiled.
+Entity <MUX2V5> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/PC_Update.vhd" in Library work.
+Entity <PC_Update> compiled.
+Entity <PC_Update> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ProgCnt.vhd" in Library work.
+Entity <ProgCnt> compiled.
+Entity <ProgCnt> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/File_Regs.vhd" in Library work.
+Entity <File_Regs> compiled.
+Entity <File_Regs> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ROM32x32_3a2b.vhd.vhd" in Library work.
+Entity <ROM32x32> compiled.
+Entity <ROM32x32> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/iface_s3.vhd" in Library work.
+Entity <Iface_s3> compiled.
+Entity <Iface_s3> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.vhf" in Library work.
+Entity <mips> compiled.
+Entity <mips> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhf" in Library work.
+Architecture behavioral of Entity mips_sys is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mips_sys> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <iface_s3> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mips> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <DataMem> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MUX2V32> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MUX2V5> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <PC_Update> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ProgCnt> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <File_Regs> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ROM32x32> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mips_sys> in library <work> (Architecture <behavioral>).
+Entity <mips_sys> analyzed. Unit <mips_sys> generated.
+
+Analyzing Entity <iface_s3> in library <work> (Architecture <Behavioral>).
+Entity <iface_s3> analyzed. Unit <iface_s3> generated.
+
+Analyzing Entity <mips> in library <work> (Architecture <BEHAVIORAL>).
+Entity <mips> analyzed. Unit <mips> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <ctrl> in library <work> (Architecture <Behavioral>).
+Entity <ctrl> analyzed. Unit <ctrl> generated.
+
+Analyzing Entity <DataMem> in library <work> (Architecture <Behavioral>).
+Entity <DataMem> analyzed. Unit <DataMem> generated.
+
+Analyzing Entity <MUX2V32> in library <work> (Architecture <Behavioral>).
+Entity <MUX2V32> analyzed. Unit <MUX2V32> generated.
+
+Analyzing Entity <MUX2V5> in library <work> (Architecture <Behavioral>).
+Entity <MUX2V5> analyzed. Unit <MUX2V5> generated.
+
+Analyzing Entity <PC_Update> in library <work> (Architecture <Behavioral>).
+Entity <PC_Update> analyzed. Unit <PC_Update> generated.
+
+Analyzing Entity <ProgCnt> in library <work> (Architecture <Behavioral>).
+Entity <ProgCnt> analyzed. Unit <ProgCnt> generated.
+
+Analyzing Entity <File_Regs> in library <work> (Architecture <Behavioral>).
+Entity <File_Regs> analyzed. Unit <File_Regs> generated.
+
+Analyzing Entity <ROM32x32> in library <work> (Architecture <Behavioral>).
+Entity <ROM32x32> analyzed. Unit <ROM32x32> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <iface_s3>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/iface_s3.vhd".
+    Found 1-of-4 decoder for signal <AN>.
+    Found 32-bit register for signal <INW0>.
+    Found 32-bit register for signal <INW1>.
+    Found 17-bit up counter for signal <saQ_Cnt>.
+    Found 4-bit 4-to-1 multiplexer for signal <saY>.
+    Found 7-bit 16-to-1 multiplexer for signal <SEG>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  64 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <iface_s3> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ALU.vhd".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit 4-to-1 multiplexer for signal <Y>.
+    Found 32-bit addsub for signal <Y$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <ctrl>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ctrl.vhd".
+Unit <ctrl> synthesized.
+
+
+Synthesizing Unit <DataMem>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/DataMem.vhd".
+    Found 16x32-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 32-bit register for signal <OUTW0>.
+    Found 32-bit 4-to-1 multiplexer for signal <DataOut>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <DataMem> synthesized.
+
+
+Synthesizing Unit <MUX2V32>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/MUX2V32.vhd".
+Unit <MUX2V32> synthesized.
+
+
+Synthesizing Unit <MUX2V5>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/MUX2V5.vhd".
+Unit <MUX2V5> synthesized.
+
+
+Synthesizing Unit <PC_Update>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/PC_Update.vhd".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit adder for signal <New_PC>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <PC_Update> synthesized.
+
+
+Synthesizing Unit <ProgCnt>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ProgCnt.vhd".
+    Found 32-bit register for signal <PC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ProgCnt> synthesized.
+
+
+Synthesizing Unit <File_Regs>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/File_Regs.vhd".
+    Found 32x32-bit dual-port RAM <Mram_s32Regs32> for signal <s32Regs32>.
+    Found 32x32-bit dual-port RAM <Mram_s32Regs32_ren> for signal <s32Regs32>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <File_Regs> synthesized.
+
+
+Synthesizing Unit <ROM32x32>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/ROM32x32_3a2b.vhd.vhd".
+    Found 32-bit 32-to-1 multiplexer for signal <Data>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <ROM32x32> synthesized.
+
+
+Synthesizing Unit <mips>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.vhf".
+Unit <mips> synthesized.
+
+
+Synthesizing Unit <mips_sys>.
+    Related source file is "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips_sys.vhf".
+Unit <mips_sys> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x32-bit single-port RAM                             : 1
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+# Counters                                             : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 4
+ 32-bit register                                       : 4
+# Multiplexers                                         : 5
+ 32-bit 32-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 16-to-1 multiplexer                             : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s400.nph' in environment E:\Program Files\Xilinx.
+WARNING:Xst:2404 -  FFs/Latches <INW0<31:4>> (without init value) have a constant value of 0 in block <iface_s3>.
+WARNING:Xst:2404 -  FFs/Latches <INW1<31:4>> (without init value) have a constant value of 0 in block <iface_s3>.
+INFO:Xst:2664 - HDL ADVISOR - Unit <DataMem> : The RAM <Mram_RAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <Wr>            | high     |
+    |     addrA          | connected to signal <Addr>          |          |
+    |     diA            | connected to signal <DataIn>        |          |
+    |     doA            | connected to signal <MemData>       |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2664 - HDL ADVISOR - Unit <File_Regs> : The RAM <Mram_s32Regs32> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WrEn>          | high     |
+    |     addrA          | connected to signal <WrReg>         |          |
+    |     diA            | connected to signal <WRData>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RdReg1>        |          |
+    |     doB            | connected to signal <RdData1_lcl>   |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2664 - HDL ADVISOR - Unit <File_Regs> : The RAM <Mram_s32Regs32_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <WrEn>          | high     |
+    |     addrA          | connected to signal <WrReg>         |          |
+    |     diA            | connected to signal <WRData>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RdReg2>        |          |
+    |     doB            | connected to signal <RdData2_lcl>   |          |
+    -----------------------------------------------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x32-bit single-port distributed RAM                 : 1
+ 32x32-bit dual-port distributed RAM                   : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+# Counters                                             : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Multiplexers                                         : 5
+ 32-bit 32-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 16-to-1 multiplexer                             : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips_sys> ...
+
+Optimizing unit <iface_s3> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <DataMem> ...
+
+Optimizing unit <ProgCnt> ...
+
+Optimizing unit <File_Regs> ...
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_31> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_30> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_29> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_28> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_27> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_26> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_25> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_24> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_23> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_22> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_21> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_20> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_19> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_18> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_17> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_16> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_15> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_14> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_13> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_12> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_11> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_10> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_9> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_8> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_7> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_1> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_PC/PC_0> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem127> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem125> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem121> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem123> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem119> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem115> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem117> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem113> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem109> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem111> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem107> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem103> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem105> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem101> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem97> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem99> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem95> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem91> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem93> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem89> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem85> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem87> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem83> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem79> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem81> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem77> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem73> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem75> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem71> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem67> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem69> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem65> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem63> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem61> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem57> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem59> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem55> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem51> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem53> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem49> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem45> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem47> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem43> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem39> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem41> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem37> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem33> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem35> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem31> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem27> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem29> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem25> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem21> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem23> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem19> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem15> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem17> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem13> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem9> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem11> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem7> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem3> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem5> of sequential type is unconnected in block <mips_sys>.
+WARNING:Xst:2677 - Node <u_mips/U_Regs/inst_Mram_mem1> of sequential type is unconnected in block <mips_sys>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips_sys, actual ratio is 7.
+FlipFlop u_mips/U_PC/PC_3 has been replicated 1 time(s)
+FlipFlop u_mips/U_PC/PC_4 has been replicated 1 time(s)
+FlipFlop u_mips/U_PC/PC_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mips_sys.ngr
+Top Level Output File Name         : mips_sys
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 364
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 20
+#      LUT2                        : 64
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 42
+#      LUT4                        : 110
+#      LUT4_D                      : 8
+#      MUXCY                       : 51
+#      MUXF5                       : 10
+#      VCC                         : 1
+#      XORCY                       : 52
+# FlipFlops/Latches                : 65
+#      FD                          : 33
+#      FDE                         : 32
+# RAMS                             : 96
+#      RAM16X1D                    : 64
+#      RAM16X1S                    : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 9
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                     217  out of   3584     6%  
+ Number of Slice Flip Flops:            65  out of   7168     0%  
+ Number of 4 input LUTs:               409  out of   7168     5%  
+    Number used as logic:              249
+    Number used as RAMs:               160
+ Number of IOs:                         21
+ Number of bonded IOBs:                 21  out of    173    12%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 161   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.813ns (Maximum Frequency: 63.239MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 12.575ns
+   Maximum combinational path delay: 13.256ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 15.813ns (frequency: 63.239MHz)
+  Total number of paths / destination ports: 348364 / 793
+-------------------------------------------------------------------------
+Delay:               15.813ns (Levels of Logic = 14)
+  Source:            u_mips/U_PC/PC_2 (FF)
+  Destination:       u_mips/U_Regs/inst_Mram_mem70 (RAM)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: u_mips/U_PC/PC_2 to u_mips/U_Regs/inst_Mram_mem70
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              18   0.720   1.485  u_mips/U_PC/PC_2 (u_mips/U_PC/PC_2)
+     LUT4_D:I2->O          1   0.551   0.996  u_mips/U_ROM/Mmux_Data4_SW0 (N1231)
+     LUT2:I1->O            5   0.551   0.921  u_mips/U_ROM/Mmux_Data4_1 (u_mips/U_ROM/Mmux_Data4)
+     RAM16X1D:DPRA0->DPO    1   0.551   0.869  u_mips/U_Regs/inst_Mram_mem64 (u_mips/U_Regs/N141)
+     LUT3:I2->O            3   0.551   0.975  u_mips/U_Regs/RdData2<0>1 (u_mips/RdData2<0>)
+     LUT4:I2->O            1   0.551   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_lut<0> (u_mips/U_ALU/N6)
+     MUXCY:S->O            1   0.500   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_cy<0> (u_mips/U_ALU/Maddsub_Y_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_cy<1> (u_mips/U_ALU/Maddsub_Y_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_cy<2> (u_mips/U_ALU/Maddsub_Y_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_cy<3> (u_mips/U_ALU/Maddsub_Y_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  u_mips/U_ALU/Maddsub_Y_addsub0000_cy<4> (u_mips/U_ALU/Maddsub_Y_addsub0000_cy<4>)
+     XORCY:CI->O          65   0.904   2.042  u_mips/U_ALU/Maddsub_Y_addsub0000_xor<5> (u_mips/ALU_Out<5>)
+     RAM16X1S:A3->O        2   1.072   0.945  u_mips/U_DataMem/inst_Mram_mem2 (u_mips/U_DataMem/MemData<2>)
+     LUT4:I2->O            1   0.551   0.000  u_mips/U_MuxData/Y<2>5612 (N1297)
+     MUXF5:I0->O           2   0.360   0.000  u_mips/U_MuxData/Y<2>561_f5 (u_mips/WrData<2>)
+     RAM16X1D:D                0.462          u_mips/U_Regs/inst_Mram_mem4
+    ----------------------------------------
+    Total                     15.813ns (7.580ns logic, 8.233ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            SWA<3> (PAD)
+  Destination:       u_iface/INW0_3 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: SWA<3> to u_iface/INW0_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  SWA_3_IBUF (SWA_3_IBUF)
+     FD:D                      0.203          u_iface/INW0_3
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 316 / 11
+-------------------------------------------------------------------------
+Offset:              12.575ns (Levels of Logic = 5)
+  Source:            u_mips/U_DataMem/OUTW0_1 (FF)
+  Destination:       a (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: u_mips/U_DataMem/OUTW0_1 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   0.996  u_mips/U_DataMem/OUTW0_1 (u_mips/U_DataMem/OUTW0_1)
+     LUT3:I1->O            1   0.551   0.996  u_iface/saX<1>1 (u_iface/saX<1>)
+     LUT3:I1->O            1   0.551   0.000  u_iface/Mmux_saY_41 (u_iface/N5)
+     MUXF5:I0->O           7   0.360   1.405  u_iface/Mmux_saY_2_f5_0 (u_iface/saY<1>)
+     LUT4:I0->O            1   0.551   0.801  u_iface/Mmux_SEG31 (c_OBUF)
+     OBUF:I->O                 5.644          c_OBUF (c)
+    ----------------------------------------
+    Total                     12.575ns (8.377ns logic, 4.198ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Delay:               13.256ns (Levels of Logic = 6)
+  Source:            BTN0 (PAD)
+  Destination:       a (PAD)
+
+  Data Path: BTN0 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.821   1.576  BTN0_IBUF (BTN0_IBUF)
+     LUT3:I0->O            1   0.551   0.996  u_iface/saX<9>1 (u_iface/saX<9>)
+     LUT3:I1->O            1   0.551   0.000  u_iface/Mmux_saY_31 (u_iface/N4)
+     MUXF5:I1->O           7   0.360   1.405  u_iface/Mmux_saY_2_f5_0 (u_iface/saY<1>)
+     LUT4:I0->O            1   0.551   0.801  u_iface/Mmux_SEG31 (c_OBUF)
+     OBUF:I->O                 5.644          c_OBUF (c)
+    ----------------------------------------
+    Total                     13.256ns (8.478ns logic, 4.778ns route)
+                                       (64.0% logic, 36.0% route)
+
+=========================================================================
+CPU : 11.01 / 11.37 s | Elapsed : 11.00 / 11.00 s
+ 
+--> 
+
+Total memory usage is 275324 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   97 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
