@@ -1,0 +1,73 @@
+--------------------------------------------------------------------------------
+Release 9.2.04i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+E:\Program Files\Xilinx\bin\nt\trce.exe -ise
+C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.ise -intstyle ise
+-e 3 -s 4 -xml mips_sys mips_sys.ncd -o mips_sys.twr mips_sys.pcf -ucf
+constrainFile1.ucf
+
+Design file:              mips_sys.ncd
+Physical constraint file: mips_sys.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2007-10-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_Clk = PERIOD TIMEGRP "Clk" 20 ns HIGH 50%;
+
+ 609654 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  19.123ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |   19.123|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 609654 paths, 0 nets, and 1463 connections
+
+Design statistics:
+   Minimum period:  19.123ns   (Maximum frequency:  52.293MHz)
+
+
+Analysis completed Wed Apr 25 20:59:33 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 160 MB
+
+
+

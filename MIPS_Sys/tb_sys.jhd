@@ -1,0 +1,3 @@
+MODULE tb_sys
+SUBMODULE mips_sys
+INSTANCE UUT

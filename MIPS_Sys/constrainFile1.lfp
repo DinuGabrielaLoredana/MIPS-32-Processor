@@ -1,0 +1,21 @@
+# begin LFP file C:\Users\gdinu\Desktop\automatica\labCSO\lab9\MIPS_Sys\constrainFile1.lfp
+designfile mips_sys.vhd
+parttype xc3s400-4-ft256
+bus_delimiter 0;
+set_busdelim_onsave 1;
+IO_GROUP "SWA" IO_GROUP="mips_sys" ;
+IO_GROUP "SWB" IO_GROUP="mips_sys" ;
+IO_GROUP "AN" IO_GROUP="mips_sys" ;
+INST "mips_sys" COLOR=15  ;
+NET "SWA<3>" IO_GROUP="SWA"  ;
+NET "SWA<2>" IO_GROUP="SWA"  ;
+NET "SWA<1>" IO_GROUP="SWA"  ;
+NET "SWA<0>" IO_GROUP="SWA"  ;
+NET "SWB<3>" IO_GROUP="SWB"  ;
+NET "SWB<2>" IO_GROUP="SWB"  ;
+NET "SWB<1>" IO_GROUP="SWB"  ;
+NET "SWB<0>" IO_GROUP="SWB"  ;
+NET "AN<3>" IO_GROUP="AN"  ;
+NET "AN<2>" IO_GROUP="AN"  ;
+NET "AN<1>" IO_GROUP="AN"  ;
+NET "AN<0>" IO_GROUP="AN"  ;

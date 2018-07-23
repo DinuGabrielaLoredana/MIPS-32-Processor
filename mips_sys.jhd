@@ -1,5 +1,0 @@
-MODULE mips_sys
-	SUBMODULE iface_s3
-		INSTANCE u_iface
-	SUBMODULE mips
-		INSTANCE u_mips

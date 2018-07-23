@@ -1,0 +1,3 @@
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "C:/Users/gdinu/Desktop/automatica/labCSO/lab9/MIPS_Sys/mips.sch" mips.vhf
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "C:/Users/gdinu/Desktop/automatica/labCSO/lab10/MIPS_Sys/mips.sch" mips.vhf
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "C:/Users/gdinu/Desktop/automatica/labCSO/lab10/MIPS_Sys/mips.sch" mips.vhf
